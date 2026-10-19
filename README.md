@@ -211,13 +211,6 @@ Visit the [official website](https://kit-tools-app.github.io/) for an overview, 
 
 KiT Tools is a WPF app targeting **net10.0-windows**. Building a Release configuration requires Windows and the [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0).
 
-~~~powershell
-dotnet restore KiT_Tools.csproj
-dotnet build KiT_Tools.csproj -c Release
-~~~
-
-> **Developer note:** The project has a Pre-Build step that may close a running **KiT_Tools.exe** process. Save your work and close the app before building.
-
 ## Usage and permissions
 
 - Some performance and network tools change Windows options or services and may need administrator privileges. Review your choices before applying them.
