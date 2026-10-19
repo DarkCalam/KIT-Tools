@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://darkcalam.github.io/KIT-Tools/sitemap.xml
+Sitemap: https://kit-tools-app.github.io/sitemap.xml

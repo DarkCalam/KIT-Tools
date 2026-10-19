@@ -4,166 +4,90 @@
   <meta name="google-site-verification" content="eUngyu9HPRpezsZ-YJnUE2ynL-OCMLsxG00p5Be_3a4">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10151b">
-  <meta name="description" content="KiT Tools برنامج Windows عربي لمراقبة المعالج وكرت الشاشة والذاكرة والشبكة وإدارة التنزيلات وأدوات النظام اليومية.">
+  <meta name="theme-color" content="#090d13">
+  <meta name="description" content="KiT Tools — أدوات Windows عربية لمراقبة العتاد، تحسين تجربة الألعاب، إدارة التنزيلات والبرامج، وتشخيص الشبكة من مكان واحد.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://darkcalam.github.io/KIT-Tools/">
+  <link rel="canonical" href="https://kit-tools-app.github.io/">
   <link rel="icon" href="kit-tools.ico" sizes="any">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KiT Tools">
-  <meta property="og:title" content="KiT Tools | أدوات Windows لمراقبة الحاسب بالعربية">
-  <meta property="og:description" content="راقب أداء جهازك وأدر أدوات Windows اليومية من واجهة عربية واحدة.">
-  <meta property="og:url" content="https://darkcalam.github.io/KIT-Tools/">
-  <meta property="og:image" content="https://darkcalam.github.io/KIT-Tools/kit-tools.ico">
-  <title>KiT Tools | أدوات Windows لمراقبة الحاسب بالعربية</title>
+  <meta property="og:title" content="KiT Tools — أدواتك، كلها في مكان واحد">
+  <meta property="og:description" content="راقب جهازك، جهّز ألعابك، وأدِر أدوات Windows بواجهة عربية مصممة لك.">
+  <meta property="og:url" content="https://kit-tools-app.github.io/">
+  <meta property="og:image" content="https://kit-tools-app.github.io/kit-tools.ico">
+  <title>KiT Tools — أدواتك، كلها في مكان واحد</title>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "KiT Tools",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Windows 10 and later",
-    "description": "Arabic Windows desktop utility for PC monitoring, download management, and everyday system tools.",
-    "url": "https://darkcalam.github.io/KIT-Tools/",
-    "downloadUrl": "https://github.com/DarkCalam/KIT-Tools/releases/latest",
-    "inLanguage": ["ar", "en"]
+    "@context":"https://schema.org","@type":"SoftwareApplication","name":"KiT Tools",
+    "applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10 and later",
+    "description":"Arabic-first Windows toolkit for hardware monitoring, gaming, downloads, system management, and network diagnostics.",
+    "url":"https://kit-tools-app.github.io/","downloadUrl":"https://github.com/DarkCalam/KIT-Tools/releases/latest","softwareVersion":"2.4.0","inLanguage":["ar","en"]
   }
   </script>
   <style>
-    :root {
-      color-scheme: dark;
-      --ink: #f2f5f7;
-      --muted: #aab5bf;
-      --canvas: #10151b;
-      --panel: #171f27;
-      --line: #35424d;
-      --mint: #70e1bd;
-      --blue: #80b9ff;
-      --coral: #ff987e;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--canvas); color: var(--ink); line-height: 1.7; }
-    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    a:focus-visible { outline: 3px solid #f4ce78; outline-offset: 4px; }
-    .shell { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
-    .topbar { min-height: 76px; border-bottom: 1px solid var(--line); display: flex; align-items: center; }
-    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 750; font-size: 18px; }
-    .brand img { width: 38px; height: 38px; object-fit: contain; }
-    .nav-links { display: flex; align-items: center; gap: 20px; color: var(--muted); font-size: 14px; }
-    .nav-links a { text-decoration: none; }
-    .nav-links a:hover { color: var(--ink); }
-    .intro { min-height: 390px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: center; gap: 56px; padding-block: 52px 48px; }
-    .eyebrow { color: var(--mint); font-size: 13px; font-weight: 700; margin: 0 0 10px; }
-    h1 { font-size: 44px; line-height: 1.15; margin: 0; }
-    .lead { max-width: 640px; color: #c2cbd3; font-size: 19px; margin: 16px 0 24px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .button { min-height: 46px; padding: 10px 18px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--line); border-radius: 6px; font-weight: 700; text-decoration: none; }
-    .button.primary { background: var(--mint); border-color: var(--mint); color: #10231e; }
-    .button.primary:hover { background: #91edce; }
-    .button.secondary:hover { border-color: var(--blue); color: var(--blue); }
-    .mark { width: 250px; height: 250px; display: grid; place-items: center; justify-self: center; border: 1px solid #40515e; border-radius: 50%; position: relative; }
-    .mark::before, .mark::after { content: ""; position: absolute; border: 1px solid #40515e; border-radius: 50%; inset: 18px; }
-    .mark::after { inset: 36px; border-color: #2e675a; }
-    .mark img { width: 116px; height: 116px; z-index: 1; object-fit: contain; }
-    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); }
-    .metric { padding: 17px 20px; min-height: 92px; border-inline-start: 1px solid var(--line); }
-    .metric:last-child { border-inline-start: 0; }
-    .metric strong { display: block; font-size: 17px; }
-    .metric span { display: block; color: var(--muted); font-size: 13px; }
-    .section { padding-block: 48px; }
-    .section-heading { margin-bottom: 22px; display: flex; align-items: end; justify-content: space-between; gap: 16px; }
-    h2 { margin: 0; font-size: 25px; }
-    .section-heading p { color: var(--muted); margin: 5px 0 0; }
-    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-    .feature { background: var(--canvas); padding: 22px; min-height: 142px; }
-    .feature h3 { font-size: 16px; margin: 0 0 7px; }
-    .feature p { margin: 0; color: var(--muted); font-size: 14px; }
-    .feature:nth-child(3n+1) h3 { color: var(--mint); }
-    .feature:nth-child(3n+2) h3 { color: var(--blue); }
-    .feature:nth-child(3n) h3 { color: var(--coral); }
-    .download-band { background: var(--panel); border-block: 1px solid var(--line); }
-    .download-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 28px; }
-    .download-inner p { margin: 4px 0 0; color: var(--muted); }
-    .language { direction: ltr; text-align: left; border-top: 1px solid var(--line); margin-top: 34px; padding-top: 34px; }
-    .language h2, .language p { direction: ltr; }
-    .language p { color: var(--muted); max-width: 720px; }
-    footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; padding-block: 20px; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    @media (max-width: 760px) {
-      .shell { width: min(100% - 28px, 600px); }
-      .nav-links { gap: 12px; font-size: 12px; }
-      .intro { grid-template-columns: 1fr; gap: 28px; padding-block: 38px; }
-      .intro-copy { order: 1; }
-      .mark { width: 174px; height: 174px; }
-      .mark img { width: 84px; height: 84px; }
-      h1 { font-size: 36px; }
-      .lead { font-size: 17px; }
-      .metrics { grid-template-columns: repeat(2, 1fr); }
-      .metric:nth-child(2) { border-inline-start: 0; }
-      .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .feature-grid { grid-template-columns: 1fr; }
-      .feature { min-height: auto; }
-      .download-inner { align-items: flex-start; flex-direction: column; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    :root{color-scheme:dark;--bg:#090d13;--surface:#101720;--surface2:#151f2a;--line:#ffffff14;--text:#eff5fa;--muted:#9baaba;--mint:#a8f1d4;--blue:#84baff;--violet:#b7a1ff;--orange:#ffbc7a;--font:"Segoe UI",Tahoma,Arial,sans-serif;font-family:var(--font);font-synthesis:none;text-rendering:optimizeLegibility}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 75% 4%,#18333144,transparent 34rem),var(--bg);color:var(--text);line-height:1.75}a{color:inherit;text-decoration:none}a:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:4px}button,a{-webkit-tap-highlight-color:transparent}.shell{width:min(1160px,calc(100% - 48px));margin-inline:auto}.topbar{position:sticky;top:0;z-index:10;background:#090d13d9;border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.03em}.brand img{width:38px;height:38px;border-radius:12px}.brand span{font-size:17px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:0;font-weight:500;line-height:1.2}.nav-links{display:flex;align-items:center;gap:26px;color:#bdc8d2;font-size:13px}.nav-links a:hover{color:var(--mint)}.nav-cta{padding:9px 15px;border-radius:10px;background:var(--mint);color:#0c1916;font-weight:800}.hero{position:relative;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:36px;padding-block:82px 76px;min-height:590px}.hero::before{content:"";position:absolute;inset:10% 0 auto 46%;height:440px;z-index:-1;background:radial-gradient(ellipse,#63dfbf19,transparent 68%);filter:blur(6px)}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #a8f1d433;border-radius:999px;padding:5px 12px;color:var(--mint);font-size:12px;background:#a8f1d40b}.pulse{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}h1{font-size:clamp(43px,6vw,70px);line-height:1.12;letter-spacing:-.055em;margin:20px 0 15px}.gradient{color:var(--mint)}.lead{max-width:580px;color:#b4c0cc;font-size:18px;line-height:1.95;margin:0 0 25px}.actions{display:flex;gap:12px;flex-wrap:wrap}.button{min-height:48px;padding:10px 18px;border:1px solid var(--line);border-radius:12px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:750;font-size:14px;transition:transform .2s,border-color .2s,background .2s}.button:hover{transform:translateY(-2px)}.primary{background:var(--mint);border-color:var(--mint);color:#0a1814;box-shadow:0 8px 35px #a8f1d426}.primary:hover{background:#c2f7e2}.secondary{background:#ffffff08}.secondary:hover{border-color:#a8f1d466}.fineprint{color:#7f8e9c;font-size:12px;margin-top:13px}.hero-visual{position:relative;padding:10px}.orbit{position:absolute;inset:3% 3% 2%;border:1px solid #a8f1d41c;border-radius:42px;transform:rotate(-4deg)}.app-window{position:relative;border:1px solid #ffffff21;border-radius:18px;background:#111820;box-shadow:0 35px 95px #0009,0 0 60px #74dab10c;overflow:hidden;transform:rotate(1.3deg)}.window-bar{height:43px;background:#ffffff06;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 14px;color:#90a0ad;font-size:10px;direction:ltr}.window-dots{display:flex;gap:5px}.window-dots i{width:7px;height:7px;border-radius:50%;background:#53616d}.window-dots i:first-child{background:#f78979}.mock-layout{display:grid;grid-template-columns:90px 1fr;min-height:285px;direction:ltr}.mock-sidebar{border-right:1px solid var(--line);padding:14px 9px}.mock-logo{font-size:11px;font-weight:800;color:#eef7f4;margin:0 0 18px 7px}.mock-link{font-size:8px;color:#8d9ba7;padding:7px 8px;border-radius:6px;margin:2px 0}.mock-link.active{color:var(--mint);background:#a8f1d415}.mock-main{padding:18px 18px 16px}.mock-title{font-size:14px;font-weight:750;margin-bottom:3px}.mock-caption{font-size:8px;color:#8494a3;margin-bottom:15px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{border:1px solid var(--line);background:#ffffff04;border-radius:9px;padding:10px}.stat span{display:block;color:#91a0ad;font-size:8px}.stat strong{font-size:18px;line-height:1.4}.stat em{font-style:normal;color:var(--mint);font-size:8px}.graph-card{margin-top:9px;border:1px solid var(--line);border-radius:9px;padding:10px 12px 4px}.graph-label{font-size:8px;color:#b7c2cc;display:flex;justify-content:space-between}.graph-label b{color:var(--mint)}.chart{height:91px;width:100%;margin-top:6px}.process-row{display:flex;justify-content:space-between;color:#80909d;font-size:7px;padding-top:4px}.float-chip{position:absolute;bottom:26px;left:-18px;display:flex;align-items:center;gap:10px;border:1px solid #ffffff1b;border-radius:13px;background:#151f28;padding:12px 15px;box-shadow:0 15px 45px #0007;direction:rtl}.chip-icon{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;background:#a8f1d41c;color:var(--mint)}.float-chip strong{font-size:11px;display:block}.float-chip span{font-size:9px;color:var(--muted);display:block}.trust-row{border-block:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:20px 0;color:#c8d4de;font-size:12px}.trust-item{display:flex;align-items:center;gap:9px}.trust-icon{color:var(--mint);font-size:16px}.section{padding-block:91px}.section-head{max-width:680px;margin-bottom:34px}.kicker{color:var(--mint);font-weight:750;font-size:12px;margin:0 0 5px}.section h2{font-size:clamp(29px,4vw,42px);letter-spacing:-.04em;line-height:1.28;margin:0 0 8px}.section-head>p:last-child{color:var(--muted);margin:0;font-size:15px}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.feature{padding:22px 21px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#ffffff07,#ffffff02);min-height:192px;transition:transform .2s,border-color .2s}.feature:hover{transform:translateY(-4px);border-color:#a8f1d44a}.icon{display:grid;place-items:center;width:40px;height:40px;border:1px solid #a8f1d427;border-radius:12px;background:#a8f1d40c;color:var(--mint);font-size:18px;margin-bottom:14px}.feature:nth-child(3n+2) .icon{color:var(--blue);border-color:#84baff30;background:#84baff0c}.feature:nth-child(3n) .icon{color:var(--violet);border-color:#b7a1ff30;background:#b7a1ff0c}.feature h3{font-size:16px;margin:0 0 6px}.feature p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}.feature ul{margin:10px 0 0;padding-inline-start:18px;color:#9eacb9;font-size:11px;line-height:2}.feature ul li::marker{color:#a8f1d4}.performance{background:linear-gradient(115deg,#111b20,#111821 58%,#171528);border-block:1px solid var(--line)}.performance-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.performance-copy h2{font-size:clamp(30px,4vw,43px);line-height:1.35;margin:10px 0}.performance-copy>p{color:var(--muted);font-size:14px}.pill-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:#c4d0da;font-size:11px}.game-card{border:1px solid #ffffff18;border-radius:18px;background:#0b1118;padding:21px;box-shadow:0 25px 70px #0005}.game-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:21px}.game-top strong{font-size:14px}.game-top span{color:var(--mint);font-size:10px}.monitor-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.monitor{background:#ffffff05;border:1px solid var(--line);padding:14px;border-radius:12px}.monitor-label{color:#98a8b7;font-size:10px}.monitor-value{font-size:24px;font-weight:750;margin-top:4px}.meter{height:4px;border-radius:9px;background:#ffffff14;margin-top:11px;overflow:hidden}.meter i{height:100%;display:block;border-radius:9px;background:linear-gradient(90deg,#a8f1d4,#78b8ff)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:step}.step{border-top:1px solid #a8f1d438;padding:18px 2px}.step::before{counter-increment:step;content:"0" counter(step);font-size:12px;color:var(--mint);font-weight:800;letter-spacing:.1em}.step h3{font-size:15px;margin:9px 0 5px}.step p{font-size:12px;color:var(--muted);margin:0}.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.faq-list details{border-bottom:1px solid var(--line);padding:16px 0}.faq-list summary{cursor:pointer;font-size:14px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:15px}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary::after{content:"＋";color:var(--mint)}.faq-list details[open] summary::after{content:"−"}.faq-list details p{color:var(--muted);font-size:13px;margin:10px 0 0}.download{padding-block:65px}.download-box{position:relative;overflow:hidden;border:1px solid #a8f1d438;border-radius:22px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:28px;background:radial-gradient(ellipse at 80% 50%,#59c9ac19,transparent 58%),linear-gradient(135deg,#111b20,#121925)}.download-box h2{font-size:clamp(27px,4vw,39px);line-height:1.3;margin:0 0 7px}.download-box p{color:var(--muted);margin:0;font-size:13px}.download-tags{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}.download-tags span{padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:#b7c5d0;font-size:10px}.download-box .button{flex-shrink:0}.lang-en{direction:ltr;text-align:left;border-top:1px solid var(--line);padding-top:26px;margin-top:25px}.lang-en h3{font-size:18px;margin:0 0 5px}.lang-en p{font-size:12px;color:var(--muted);max-width:680px;margin:0}.footer{border-top:1px solid var(--line);padding:25px 0;color:#8e9caa;font-size:11px}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.footer-links{display:flex;gap:18px}.footer a:hover{color:var(--mint)}
+    @media(max-width:850px){.nav-links{gap:15px}.hero{grid-template-columns:1fr;gap:35px;padding-block:60px}.hero-copy{max-width:700px}.hero-visual{width:min(540px,100%);margin-inline:auto}.feature-grid{grid-template-columns:repeat(2,1fr)}.performance-inner{grid-template-columns:1fr;gap:28px}.faq{grid-template-columns:1fr;gap:12px}.section{padding-block:70px}}
+    @media(max-width:560px){.shell{width:calc(100% - 30px)}.nav{min-height:66px}.nav-links a:not(.nav-cta){display:none}.nav-cta{font-size:11px;padding:8px 11px}.hero{min-height:0;padding-block:49px 40px;gap:28px}h1{font-size:47px}.lead{font-size:15px}.button{font-size:12px;padding:9px 13px}.hero-visual{padding:3px}.mock-layout{grid-template-columns:70px 1fr;min-height:252px}.mock-main{padding:14px 11px}.mock-sidebar{padding-inline:6px}.mock-link{font-size:7px;padding:6px 5px}.stats{gap:5px}.stat{padding:7px}.stat strong{font-size:15px}.chart{height:74px}.float-chip{left:-4px;bottom:9px}.trust-row{justify-content:flex-start;gap:13px 20px}.trust-item{font-size:10px}.section{padding-block:58px}.feature-grid{grid-template-columns:1fr;gap:9px}.feature{min-height:0;padding:18px}.feature ul{font-size:10px}.performance-inner{gap:20px}.game-card{padding:14px}.monitor{padding:10px}.monitor-value{font-size:20px}.steps{grid-template-columns:1fr;gap:6px}.step{padding:12px 2px}.download-box{padding:25px 20px;align-items:flex-start;flex-direction:column}.download-box .button{width:100%}.footer-inner{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <nav class="nav shell" aria-label="التنقل الرئيسي">
-      <a class="brand" href="#top"><img src="kit-tools.ico" alt=""><span>KiT Tools</span></a>
-      <div class="nav-links">
-        <a href="#features">المزايا</a>
-        <a href="#download">التنزيل</a>
-        <a href="#english" lang="en" dir="ltr">English</a>
-      </div>
-    </nav>
-  </header>
+  <header class="topbar"><nav class="nav shell" aria-label="التنقل الرئيسي">
+    <a class="brand" href="#top"><img src="kit-tools.ico" alt=""><span>KiT Tools<small>كل أدوات Windows في مكان واحد</small></span></a>
+    <div class="nav-links"><a href="#features">المزايا</a><a href="#gaming">الأداء والألعاب</a><a href="#how">كيف تبدأ</a><a href="#download" class="nav-cta">تنزيل البرنامج <span aria-hidden="true">↙</span></a></div>
+  </nav></header>
   <main id="top">
-    <section class="intro shell" aria-labelledby="page-title">
-      <div class="intro-copy">
-        <p class="eyebrow">أدوات سطح مكتب لنظام Windows</p>
-        <h1 id="page-title">KiT Tools</h1>
-        <p class="lead">راقب أداء جهازك وأدر مهام Windows اليومية من واجهة عربية واضحة.</p>
-        <div class="actions">
-          <a class="button primary" href="https://github.com/DarkCalam/KIT-Tools/releases/latest">تنزيل أحدث إصدار <span aria-hidden="true">↓</span></a>
-          <a class="button secondary" href="https://github.com/DarkCalam/KIT-Tools">صفحة المشروع على GitHub</a>
-        </div>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> إصدار Windows · واجهة عربية</p>
+        <h1 id="hero-title">جهازك، تحت<br><span class="gradient">سيطرتك.</span></h1>
+        <p class="lead">راقب أداء الحاسب، جهّز جلستك للألعاب، وأدِر مهام Windows اليومية من تطبيق واحد صُمّم ليكون واضحًا وسهلًا.</p>
+        <div class="actions"><a class="button primary" href="https://github.com/DarkCalam/KIT-Tools/releases/latest">حمّل KiT Tools <span aria-hidden="true">↓</span></a><a class="button secondary" href="#features">اكتشف الأدوات <span aria-hidden="true">⌄</span></a></div>
+        <p class="fineprint">Windows 10 أو أحدث <span aria-hidden="true">·</span> الإصدار 2.4.0 <span aria-hidden="true">·</span> تنزيل من GitHub Releases</p>
       </div>
-      <div class="mark" aria-label="شعار KiT Tools"><img src="kit-tools.ico" alt="شعار KiT Tools"></div>
+      <div class="hero-visual" aria-label="معاينة توضيحية لواجهة مراقبة الجهاز في KiT Tools">
+        <div class="orbit"></div><div class="app-window"><div class="window-bar"><span>KiT Tools&nbsp; / &nbsp;Dashboard</span><span class="window-dots"><i></i><i></i><i></i></span></div>
+          <div class="mock-layout"><aside class="mock-sidebar"><p class="mock-logo">KiT Tools</p><div class="mock-link active">▦ &nbsp; Dashboard</div><div class="mock-link">◷ &nbsp; Performance</div><div class="mock-link">↓ &nbsp; Downloads</div><div class="mock-link">⌘ &nbsp; System tools</div><div class="mock-link">⚙ &nbsp; Settings</div></aside>
+            <div class="mock-main"><div class="mock-title">مراقبة الجهاز</div><div class="mock-caption">نظرة مباشرة على أداء حاسبك</div><div class="stats"><div class="stat"><span>المعالج</span><strong>24%</strong><em>● مستقر</em></div><div class="stat"><span>الذاكرة</span><strong>8.2 <small style="font-size:9px">GB</small></strong><em>● 52% مستخدم</em></div><div class="stat"><span>الشبكة</span><strong>↓ 4.8</strong><em>● Mbps</em></div></div>
+              <div class="graph-card"><div class="graph-label"><span>استخدام المعالج</span><b>آخر 60 ثانية</b></div><svg class="chart" viewBox="0 0 360 95" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#a8f1d4" stop-opacity=".26"/><stop offset="1" stop-color="#a8f1d4" stop-opacity="0"/></linearGradient></defs><path d="M0 72 C17 68 18 48 37 54 S58 75 76 59 S96 45 113 51 S131 69 150 55 S174 27 189 39 S213 57 230 43 S251 50 267 35 S289 48 305 28 S332 37 360 15 V95 H0Z" fill="url(#fill)"/><path d="M0 72 C17 68 18 48 37 54 S58 75 76 59 S96 45 113 51 S131 69 150 55 S174 27 189 39 S213 57 230 43 S251 50 267 35 S289 48 305 28 S332 37 360 15" fill="none" stroke="#a8f1d4" stroke-width="2"/></svg><div class="process-row"><span>العملية</span><span>استخدام CPU</span><span>الذاكرة</span></div></div>
+            </div>
+          </div>
+        </div><div class="float-chip"><div class="chip-icon">✦</div><div><strong>واجهة عربية من البداية</strong><span>مصممة لتكون مفهومة وسريعة</span></div></div>
+      </div>
     </section>
-    <section class="metrics shell" aria-label="مجالات المراقبة">
-      <div class="metric"><strong>CPU وGPU</strong><span>مراقبة المعالج وكرت الشاشة</span></div>
-      <div class="metric"><strong>RAM والتخزين</strong><span>استخدام الذاكرة والأقراص</span></div>
-      <div class="metric"><strong>الشبكة</strong><span>معدلات الرفع والتنزيل وأدوات التشخيص</span></div>
-      <div class="metric"><strong>العمليات</strong><span>متابعة العمليات الجارية</span></div>
-    </section>
-    <section id="features" class="section shell" aria-labelledby="features-title">
-      <div class="section-heading"><div><h2 id="features-title">أدواتك اليومية في مكان واحد</h2><p>واجهة عربية ومعلومات عملية عن جهازك.</p></div></div>
+    <div class="trust-row shell" aria-label="ملخص البرنامج"><div class="trust-item"><span class="trust-icon">◈</span>مراقبة عتاد مباشرة</div><div class="trust-item"><span class="trust-icon">⌁</span>أدوات نظام متكاملة</div><div class="trust-item"><span class="trust-icon">◉</span>ثيمات وإعدادات مرنة</div><div class="trust-item"><span class="trust-icon">⌘</span>Windows 10 وما بعده</div></div>
+    <section class="section shell" id="features" aria-labelledby="features-title">
+      <div class="section-head"><p class="kicker">صندوق أدوات متكامل</p><h2 id="features-title">من نبضة المعالج إلى تفاصيل الشبكة</h2><p>كل قسم في KiT Tools يؤدي مهمة واضحة، لتجد ما تحتاجه من دون التنقل بين عشرات النوافذ.</p></div>
       <div class="feature-grid">
-        <article class="feature"><h3>مراقبة الجهاز</h3><p>قراءات مباشرة للمعالج وكرت الشاشة والذاكرة والتخزين والشبكة، مع قائمة العمليات.</p></article>
-        <article class="feature"><h3>إدارة التنزيلات</h3><p>تابع التنزيلات والسرعة والوقت المتبقي، واستأنف التنزيل عندما يسمح المصدر بذلك.</p></article>
-        <article class="feature"><h3>أدوات Windows</h3><p>إدارة بدء التشغيل، اختصارات النظام، لقطات الشاشة، ومعلومات الجهاز.</p></article>
-        <article class="feature"><h3>الشبكة والطابعات</h3><p>أدوات فحص الاتصال وPing ومعلومات الشبكة وإدارة الطابعات.</p></article>
-        <article class="feature"><h3>التنظيف وإزالة البرامج</h3><p>اختر عناصر التنظيف يدوياً؛ خيارات حذف بيانات المستخدم غير محددة افتراضياً.</p></article>
-        <article class="feature"><h3>التخصيص</h3><p>ثيمات وإعدادات قابلة للتعديل لتناسب استخدامك.</p></article>
-      </div>
-      <div id="english" class="language" lang="en" aria-labelledby="english-title">
-        <h2 id="english-title">KiT Tools for Windows</h2>
-        <p>KiT Tools is an Arabic-first Windows desktop utility for PC monitoring and everyday system tasks. View CPU, GPU, memory, storage, network, and running processes; manage downloads, startup apps, cleanup, printers, screenshots, and more.</p>
-        <p><a href="https://github.com/DarkCalam/KIT-Tools/releases/latest">Download the latest release</a> · <a href="https://github.com/DarkCalam/KIT-Tools">View the project on GitHub</a></p>
+        <article class="feature"><div class="icon">◉</div><h3>لوحة مراقبة الجهاز</h3><p>تابع حالة الحاسب ومؤشراته من لوحة واحدة.</p><ul><li>المعالج وكرت الشاشة والذاكرة</li><li>الأقراص والشبكة والعمليات الجارية</li></ul></article>
+        <article class="feature"><div class="icon">↗</div><h3>الأداء ووضع الألعاب</h3><p>أدوات لمتابعة اللعب وضبط تجربتك حسب اختياراتك.</p><ul><li>اكتشاف الألعاب ووضع الألعاب</li><li>نافذة Overlay لمراقبة الأداء أثناء اللعب</li></ul></article>
+        <article class="feature"><div class="icon">⇩</div><h3>إدارة التنزيلات</h3><p>تابع التنزيلات وتحكم بها من قائمة موحدة.</p><ul><li>تنزيلات الملفات ومحتوى الفيديو</li><li>السرعة والتقدم والاستكمال عند دعم المصدر</li></ul></article>
+        <article class="feature"><div class="icon">✚</div><h3>تثبيت البرامج وإزالتها</h3><p>اعثر على البرامج المثبتة وسهّل إدارة تطبيقاتك.</p><ul><li>تثبيت العناصر من قائمة التطبيقات</li><li>استعراض التطبيقات وإزالة ما تحدده</li></ul></article>
+        <article class="feature"><div class="icon">⌁</div><h3>بدء التشغيل والتعاريف</h3><p>تحكم بالتطبيقات التي تبدأ مع Windows وتحقق من تحديثات التعاريف.</p><ul><li>عناصر بدء التشغيل من مواقعها المعتادة</li><li>فحص تحديثات التعاريف عبر Windows Update</li></ul></article>
+        <article class="feature"><div class="icon">◎</div><h3>تشخيص الشبكة</h3><p>أدوات عملية لفهم الاتصال واختبار المشكلات الشائعة.</p><ul><li>اختبار السرعة وPing وتتبع المسار</li><li>DNS والمنافذ والأجهزة ومعلومات المحولات</li></ul></article>
+        <article class="feature"><div class="icon">⌘</div><h3>اختصارات النظام</h3><p>وصول سريع إلى أدوات وإعدادات Windows الشائعة.</p></article>
+        <article class="feature"><div class="icon">▣</div><h3>لقطات الشاشة</h3><p>التقط الشاشة كاملة أو حدد منطقة بعينها عبر أداة القص.</p></article>
+        <article class="feature"><div class="icon">⎙</div><h3>الطابعات والتنظيف</h3><p>إدارة الطابعات وتنظيف الملفات المؤقتة والعناصر التي تختارها بعناية.</p><ul><li>خيارات التنظيف قابلة للاختيار</li><li>العناصر المؤثرة لا تُحدد تلقائيًا</li></ul></article>
+        <article class="feature"><div class="icon">◐</div><h3>التخصيص والإعدادات</h3><p>اختر اللغة والثيم واضبط الإعدادات العامة والاعتماديات بما يناسبك.</p></article>
       </div>
     </section>
-    <section id="download" class="download-band">
-      <div class="download-inner shell">
-        <div><h2>ابدأ مع KiT Tools</h2><p>النسخة المنشورة ومتطلبات التشغيل متاحة في صفحة الإصدارات.</p></div>
-        <a class="button primary" href="https://github.com/DarkCalam/KIT-Tools/releases/latest">عرض أحدث إصدار <span aria-hidden="true">↗</span></a>
-      </div>
+    <section class="performance" id="gaming"><div class="performance-inner shell section">
+      <div class="performance-copy"><p class="kicker">للعب والعمل اليومي</p><h2>أداء جهازك،<br><span class="gradient">بصورة أوضح.</span></h2><p>اعرف ما يحدث خلف الشاشة. تعرض لوحة المراقبة مؤشرات العتاد والعمليات، بينما تجمع أدوات الأداء وضع الألعاب ونافذة Overlay في مكان يسهل الوصول إليه.</p><div class="pill-list"><span class="pill">CPU وGPU</span><span class="pill">الذاكرة والأقراص</span><span class="pill">العمليات</span><span class="pill">وضع الألعاب</span><span class="pill">Overlay</span></div></div>
+      <div class="game-card" aria-label="رسم توضيحي لمؤشرات أداء الجهاز"><div class="game-top"><strong>نظرة على الأداء</strong><span>● مراقبة الجهاز</span></div><div class="monitor-grid"><div class="monitor"><div class="monitor-label">استخدام المعالج</div><div class="monitor-value">24%</div><div class="meter"><i style="width:24%"></i></div></div><div class="monitor"><div class="monitor-label">استخدام الذاكرة</div><div class="monitor-value">52%</div><div class="meter"><i style="width:52%"></i></div></div><div class="monitor"><div class="monitor-label">نشاط الشبكة</div><div class="monitor-value">4.8 <small style="font-size:11px;color:#9baaba">Mbps</small></div><div class="meter"><i style="width:39%"></i></div></div><div class="monitor"><div class="monitor-label">عمليات نشطة</div><div class="monitor-value">—</div><div class="meter"><i style="width:68%"></i></div></div></div></div>
+    </div></section>
+    <section class="section shell" id="how"><div class="section-head"><p class="kicker">بداية سهلة</p><h2>ثلاث خطوات، وأنت جاهز</h2><p>نزّل النسخة المنشورة واتبع تعليمات صفحة الإصدار للبدء.</p></div><div class="steps"><article class="step"><h3>نزّل النسخة</h3><p>افتح صفحة أحدث إصدار من GitHub واختر ملف Windows المنشور.</p></article><article class="step"><h3>شغّل KiT Tools</h3><p>يعمل البرنامج على Windows 10 أو أحدث. قد تتطلب بعض مهام النظام موافقة المسؤول.</p></article><article class="step"><h3>اختر ما تريد إنجازه</h3><p>راقب جهازك أو انتقل مباشرة إلى التنزيلات أو أدوات النظام أو الإعدادات.</p></article></div></section>
+    <section class="section shell" id="faq"><div class="faq"><div class="section-head"><p class="kicker">معلومات سريعة</p><h2>أسئلة شائعة</h2><p>تفاصيل تساعدك قبل التنزيل والاستخدام.</p></div><div class="faq-list">
+      <details><summary>ما نظام التشغيل المطلوب؟</summary><p>يستهدف KiT Tools نظام Windows 10 أو أحدث. قد تحتاج بعض مهام النظام إلى تشغيلها بموافقة المسؤول.</p></details>
+      <details><summary>كيف أحصل على أحدث إصدار؟</summary><p>زر التنزيل يفتح صفحة الإصدارات الرسمية للمشروع على GitHub، حيث تجد الملفات وملاحظات الإصدار.</p></details>
+      <details><summary>هل يمكن استكمال التنزيل بعد إيقافه؟</summary><p>يدعم مدير التنزيلات الاستكمال عندما يسمح خادم المصدر بذلك؛ وقد لا يتوفر هذا الخيار لكل رابط.</p></details>
+      <details><summary>هل يحذف التنظيف ملفاتي تلقائيًا؟</summary><p>تختار عناصر التنظيف بنفسك. العناصر التي قد تؤثر في بيانات المستخدم أو النظام غير محددة افتراضيًا.</p></details>
+      <details><summary>هل الواجهة عربية؟</summary><p>نعم، صُمم التطبيق بواجهة عربية واتجاه من اليمين إلى اليسار، مع إعدادات للغة والثيم.</p></details>
+    </div></div></section>
+    <section class="download shell" id="download"><div class="download-box"><div><p class="kicker">ابدأ من هنا</p><h2>أدوات أكثر. نوافذ أقل.</h2><p>نزّل KiT Tools واكتشف أدوات Windows في واجهة عربية واحدة.</p><div class="download-tags"><span>Windows 10+</span><span>واجهة عربية</span><span>الإصدار 2.4.0</span></div></div><a class="button primary" href="https://github.com/DarkCalam/KIT-Tools/releases/latest">اذهب إلى أحدث إصدار <span aria-hidden="true">↗</span></a></div>
+      <div class="lang-en" id="english" lang="en"><h3>KiT Tools for Windows</h3><p>KiT Tools brings hardware monitoring, gaming tools, download management, system utilities, and network diagnostics into one Arabic-first Windows app. View CPU, GPU, memory, storage, network, and running processes; manage startup apps, installed software, drivers, printers, screenshots, and more. <a href="https://github.com/DarkCalam/KIT-Tools/releases/latest">Download the latest release</a> · <a href="https://github.com/DarkCalam/KIT-Tools">View the project on GitHub</a></p></div>
     </section>
   </main>
-  <footer><div class="footer-inner shell"><span>KiT Tools · Windows desktop utilities</span><span>© Karar · <a href="https://github.com/DarkCalam/KIT-Tools">GitHub</a></span></div></footer>
+  <footer class="footer"><div class="footer-inner shell"><span>KiT Tools <span aria-hidden="true">·</span> أدوات Windows من Karar</span><div class="footer-links"><a href="https://github.com/DarkCalam/KIT-Tools">GitHub</a><a href="https://github.com/DarkCalam/KIT-Tools/releases/latest">الإصدارات</a><a href="#top">العودة للأعلى ↑</a></div><span>© Karar</span></div></footer>
 </body>
 </html>
