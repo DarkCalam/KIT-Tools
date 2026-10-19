@@ -1,10 +1,10 @@
-
-
-[Visit the official KiT Tools website](https://darkcalam.github.io/KIT-Tools/)# KiT Tools
+# KiT Tools
 
 **An Arabic Windows desktop toolkit for monitoring your PC and managing everyday system tasks.**
 
 [View the latest release](https://github.com/DarkCalam/KIT-Tools/releases/latest) · [Open the repository](https://github.com/DarkCalam/KIT-Tools)
+
+[Visit the KiT Tools website](https://darkcalam.github.io/KIT-Tools/)
 
 KiT Tools brings live hardware and process monitoring together with practical Windows utilities in one desktop app. Its interface is designed for Arabic, with right-to-left layouts and English technical values where appropriate.
 
@@ -56,4 +56,4 @@ dotnet restore KiT_Tools.csproj
 dotnet build KiT_Tools.csproj -c Release
 ```
 
-لتحميل النسخة المنشورة، راجع [أحدث إصدار](https://github.com/DarkCalam/KIT-Tools/releases/latest).
+لتحميل النسخة المنشورة، راجع [أحدث إصدار](https://github.com/DarkCalam/KIT-Tools/releases/latest)، أو زر [موقع KiT Tools](https://darkcalam.github.io/KIT-Tools/).
